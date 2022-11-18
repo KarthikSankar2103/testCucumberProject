@@ -14,20 +14,6 @@ import cucumber.api.java.en.When;
 
 public class loginLogoutPageStepDefinitions extends TestBase {
 
-	LoginLogoutPage loginPage = new LoginLogoutPage(driver);
-	WaitHelper waitHelper = new WaitHelper(driver);
-	
-	@Given("^I am on the Login page URL \"([^\"]*)\"$")
-	public void i_am_on_the_Login_page_URL(String arg1) throws Throwable {
-		driver.get(arg1);
-		//waitHelper = new WaitHelper(driver);
-	}
-
-	@Then("^I click on sign in button and wait for sign in page$")
-	public void i_click_on_sign_in_button_and_wait_for_sign_in_page() throws Throwable {
-		loginPage.clickSignInButton();
-		waitHelper.WaitForElement(loginPage.userName, 60);
-	}
 
 	@Then("^I should see Sign In Page$")
 	public void i_should_see_Sign_In_Page() throws Throwable {
